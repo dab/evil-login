@@ -112,6 +112,11 @@ function init() {
 
   elements.togglePassword.addEventListener('click', togglePasswordVisibility);
   elements.form.addEventListener('submit', handleFormSubmit);
+  elements.form.addEventListener('input', () => {
+    if (elements.formError.textContent) {
+      setFormMessage('', 'error');
+    }
+  });
 
   const forgotLink = document.querySelector('.forgot-link');
   const signupLink = document.querySelector('.signup-prompt a');

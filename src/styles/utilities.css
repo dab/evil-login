@@ -1,0 +1,13 @@
+/**
+ * Utility Classes
+ * High-priority utilities using @layer for cascade control
+ */
+
+@layer utilities;
+
+@layer utilities {
+  :is(button, a, input):focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: 2px;
+  }
+}

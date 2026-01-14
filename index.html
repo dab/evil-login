@@ -4,7 +4,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Secure Login</title>
-        <link rel="stylesheet" href="styles.css" />
+        <!-- Design tokens must load first -->
+        <link rel="stylesheet" href="src/styles/tokens.css" />
+        <!-- Base styles -->
+        <link rel="stylesheet" href="src/styles/base.css" />
+        <!-- Component styles (order independent due to @layer) -->
+        <link rel="stylesheet" href="src/styles/components/input.css" />
+        <link rel="stylesheet" href="src/styles/components/form.css" />
+        <link rel="stylesheet" href="src/styles/components/button.css" />
+        <link rel="stylesheet" href="src/styles/components/card.css" />
+        <!-- Utilities last for highest specificity -->
+        <link rel="stylesheet" href="src/styles/utilities.css" />
     </head>
     <body>
         <div class="container">
@@ -114,6 +124,6 @@
             </main>
         </div>
 
-        <script src="script.js"></script>
+        <script type="module" src="src/pages/login/login.js"></script>
     </body>
 </html>
